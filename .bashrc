@@ -1,4 +1,5 @@
 #Traveling Profile
+# wget https://raw.githubusercontent.com/SuperFlea2828/BASHScripts/master/.bashrc -O ~/.bashrc && . ~/.bashrc
 
 
 #-------------------
