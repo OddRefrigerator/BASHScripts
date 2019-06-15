@@ -1,7 +1,7 @@
 #!/bin/sh
 
-UserPassword="User:Password"
-Host=http://127.0.0.1:2020/jsonrpc
+UserPassword="kodi:TheFlyingFish"
+Host=http://192.168.1.2:2020/jsonrpc
 
 GenerateJsonData()
 {
