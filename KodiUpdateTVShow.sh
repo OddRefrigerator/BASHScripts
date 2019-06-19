@@ -3,9 +3,9 @@
 UserPassword="kodi:TheFlyingFish"
 Host=http://192.168.1.2:2020/jsonrpc
 
-x=300
+x=431
 
-while [ $x -le 304 ]
+while [ $x -le 490 ]
 do
   echo "Welcome $x times"
   x=$(( $x + 1 ))
