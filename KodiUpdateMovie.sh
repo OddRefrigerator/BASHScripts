@@ -1,7 +1,7 @@
 #!/bin/sh
 
 UserPassword="kodi:TheFlyingFish"
-Host=http://192.168.1.2:2020/jsonrpc
+Host=http://rpi4.home.local:8080/jsonrpc
 movieidParam=$1
 
 GenerateJsonData()

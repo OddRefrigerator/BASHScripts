@@ -1,14 +1,16 @@
 #!/bin/sh
 
 UserPassword="kodi:TheFlyingFish"
-Host=http://rpi4.home.local:8080/jsonrpc
+Host=http://rpi4:8080/jsonrpc
 
-x=1354
+x=1554
 
-while [ $x -le 1356 ]
+while [ $x -le 1558 ]
 do
-  echo "Welcome $x times"
   x=$(( $x + 1 ))
+  echo " "
+  echo "Value of $x used in request"
+  echo " "
 
 GenerateJsonData()
 {
@@ -16,15 +18,16 @@ GenerateJsonData()
 {
    "id":1,
    "jsonrpc":"2.0",
-   "method":"VideoLibrary.RefreshTVShow",
+   "method":"VideoLibrary.RefreshMovie",
    "params":{
-     "tvshowid": $x,
-     "ignorenfo": true,
-     "refreshepisodes": true
+     "movieid": $x,
+     "ignorenfo": true
     }
 }
 EOF
 }
+
+echo "$(GenerateJsonData)"
 
 curl -v -X POST \
 -H "Content-Type:application/json" \
@@ -33,5 +36,3 @@ curl -v -X POST \
 
 done
 
-echo "\n"
-echo "First arg. is" $x
